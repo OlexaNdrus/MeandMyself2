@@ -7,6 +7,7 @@
     <title>Me and Myself</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap/form-index.css">
 </head>
 <body>
 <header>
@@ -21,7 +22,7 @@
 </header>
 <div class="header-back" id="header-back">
 </div>
-<section id="mybio">
+<section id="mybio" class="section">
     <header><h1>My Bio</h1></header>
     <div class="mybio">
         <h2>Childhood</h2>
@@ -36,7 +37,7 @@
         <button>Explore</button>
     </div>
 </section>
-<section id="hobbys">
+<section id="hobbys" class="section">
     <header><h1>Hobbys</h1></header>
     <div class="hobbys">
         <h2>Sport Orienteering</h2>
@@ -47,7 +48,7 @@
             Sports orienteering is a cross-country ride with a compass and a map of a predetermined distance. </p>
     </div>
 </section>
-<section id="skills">
+<section id="skills" class="section">
     <header><h1>Skills</h1></header>
     <div class="skills">
         <ul>
@@ -55,18 +56,40 @@
         </ul>
     </div>
 </section>
-<section id="contact">
+<section id="contact" class="contact_form">
     <header><h1>Contact</h1></header>
-    <form>
-        <h3>Contact me , if you have some questions:</h3>
-        <p><input type="text" id="first_name" placeholder="First name"></p>
-        <p><input type="text" id="last_name" placeholder="Last name"></p>
-        <p><input type="text" id="subject" placeholder="Subject"></p>
-        <p><input type="email" id="email" placeholder="Email"></p>
-        <p><input type="text" id="message" placeholder="Your message here..."></p>
-        <p><input type="submit" id="send_button" value="Send"></p>
-        <p><input type="submit" id="reset_button" value="Reset"></p>
-    </form>
+    <div class="container">
+
+        <form role="form" class="message-form">
+            <h1 class="contact_text">Contact me , if you have some questions:</h1>
+            <div class="first_name required-field-block">
+                <input type="text" placeholder="First Name" class="form-control">
+                <div class="required-icon">
+                    <div class="text">*</div>
+                </div>
+            </div>
+            <div class="last_name required-field-block">
+                <input type="text" placeholder="Last Name" class="form-control">
+                <div class="required-icon">
+                    <div class="text">*</div>
+                </div>
+            </div>
+            <div class="email required-field-block">
+                <input type="text" placeholder="Email" class="form-control">
+                <div class="required-icon">
+                    <div class="text">*</div>
+                </div>
+            </div>
+            <input type="text" placeholder="Subject" class="subject form-control">
+            <div class="message required-field-block">
+                <textarea rows="3" class="form-control" placeholder="Message"></textarea>
+                <div class="required-icon">
+                    <div class="text">*</div>
+                </div>
+            </div>
+            <button class="send_button btn btn-primary">Send</button>
+        </form>
+    </div>
 </section>
 <footer>
         <div class="links">
@@ -96,4 +119,6 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/bootstrap/form-index.js"></script>
+<script src="js/scroll.js"></script>
 </body>

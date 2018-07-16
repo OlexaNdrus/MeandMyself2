@@ -6,25 +6,36 @@ body {
     min-width: 340px;
     margin:auto;
 }
-
+h1 {
+    font-family:"Yeseva One",sans-serif ;
+    font-size: x-large;
+}
+p {
+    font-family:"Yeseva One",sans-serif ;
+    font-size: 12pt;
+}
+.mybio p {
+    font-size: 90%;
+}
+a {
+    font-family:"Yeseva One",sans-serif ;
+    font-size: large;
+}
 header nav {
     display: flex;
     width: 80%;
-    flex-wrap: wrap;
 }
-
 header nav ul  {
     display: flex;
     flex:1;
     padding:0;
     justify-content:center;
     align-items: center;
+    flex-wrap: wrap;
 }
-
 header nav ul li{
     margin-right:3%;
 }
-
 a:hover{
     background: cyan;
     color:firebrick;
@@ -32,24 +43,21 @@ a:hover{
 ul li{
     list-style-type: none;
 }
-
 .skill_scale{
     width:70%;
     padding-right: 5%;
     padding-left: 5%;
 }
-section div{
+.section div{
     display:flex;
     height: 500px;
 }
 header nav ul li :last-child {
     margin-left:auto
 }
-
 a{
     color:white;
     text-decoration: none;}
-
 header {
     display:flex;
     background-color:var(--font-color);
@@ -57,21 +65,19 @@ header {
     justify-content: center;
     align-items: center;
 }
-
 header h1 {
     display: flex;
     color: white;
     text-align: center;
     text-decoration: none;
+    margin: 15px 0 15px 0;
 }
-
 .header-back {
     background-image: url("../img/header_background.jpg");
     background-size: cover;
     background-position: center;
     height: 700px;
 }
-
 .par_text{
     margin:5% 5% 5% 5%;
 }
@@ -80,7 +86,6 @@ header h1 {
     height: 50%;
     width: 50%;
 }
-
 .mybio {
     background-image:  linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.4) 100%),url("../img/forest.jpg");
     background-size: cover;
@@ -100,22 +105,6 @@ header h1 {
     justify-content:space-between;
     align-items:center;
 }
-
-/*body::after {*/
-    /*background: url(yourfilename.jpg);*/
-    /*content: "";*/
-    /*opacity: 0.6;*/
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*right: 0;*/
-    /*left: 0;*/
-    /*z-index: -1;*/
-    /*width:auto;*/
-    /*height: 100%;*/
-/*}*/
-
-
 .skills {
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.4) 100%),url("../img/mountains.jpg");
     background-size: cover;
@@ -128,18 +117,15 @@ button {
     height: 150px;
     width: 30%;
 }
-
 .headermenu {
     height: 50px;
 }
-
 footer{
     background-color:var(--font-color);
     display:grid;
     grid-gap:2% 5%;
-    grid-template: 1fr/1fr 1fr 1fr;
+    grid-template: 1fr/repeat(3,1fr);
 }
-
 footer > *{
     display:flex;
     flex-direction: column;
@@ -148,19 +134,74 @@ footer > *{
     align-content:space-between;
     justify-content:space-between;
 }
-
 .logo_list {
     display: flex;
     flex-direction: row;
     padding: 0;
 }
-
 .foot_menu{
     margin-bottom: 30%;
     padding:0;
 }
-
 .links:first-child{
     padding-left:10%;
 }
-
+.message-form{
+    margin: 0 0;
+    background-color:#b8daff;
+}
+@media screen and (min-width: 460px){
+    .contact_form div form {
+        display: grid;
+        grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+        grid-gap: 2% 5%;
+        width: 400px;
+        margin: 0 5%;
+    }
+    .contact_text {
+        grid-column: 1/5;
+    }
+    .first_name {
+        grid-column: 1/3;
+    }
+    .last_name {
+        grid-column: 3/5;
+    }
+    .email {
+        grid-column: 1/3;
+    }
+    .subject {
+        grid-column: 3/5;
+    }
+    .message {
+        grid-column: 2/4;
+    }
+    .send_button {
+        grid-column: 2/4;
+    }
+}
+@media screen and (max-width: 460px) {
+    .contact_form div form {
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(7,1fr)  ;
+    }
+    footer{
+        grid-template: 1fr/1fr;}
+}
+.contact_form div {
+    max-width:960px;
+    padding:0px;
+}
+/*body::after {*/
+/*background: url(yourfilename.jpg);*/
+/*content: "";*/
+/*opacity: 0.6;*/
+/*position: fixed;*/
+/*top: 0;*/
+/*bottom: 0;*/
+/*right: 0;*/
+/*left: 0;*/
+/*z-index: -1;*/
+/*width:auto;*/
+/*height: 100%;*/
+/*}*/
