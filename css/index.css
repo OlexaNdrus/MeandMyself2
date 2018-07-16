@@ -1,3 +1,6 @@
+:root {
+    --font-color: #424242;
+}
 body {
     max-width: 950px;
     min-width: 340px;
@@ -6,42 +9,57 @@ body {
 
 header nav {
     display: flex;
+    width: 80%;
+    flex-wrap: wrap;
 }
 
 header nav ul  {
     display: flex;
     flex:1;
     padding:0;
+    justify-content:center;
+    align-items: center;
 }
 
 header nav ul li{
-    list-style-type: none;
-    margin-right:2%;
+    margin-right:3%;
 }
 
-header nav ul li :last_child {
+a:hover{
+    background: cyan;
+    color:firebrick;
+}
+ul li{
+    list-style-type: none;
+}
+
+.skill_scale{
+    width:70%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+section div{
+    display:flex;
+    height: 500px;
+}
+header nav ul li :last-child {
     margin-left:auto
 }
 
-header nav {
-    display: flex
-}
-
-.menu-list li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
+a{
+    color:white;
+    text-decoration: none;}
 
 header {
-    background-color: dimgray;
+    display:flex;
+    background-color:var(--font-color);
     height: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
-    display: block;
+    display: flex;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -50,34 +68,99 @@ header h1 {
 .header-back {
     background-image: url("../img/header_background.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
-    
+    height: 700px;
 }
 
-#mybio {
-    background-image: url("../img/forest.jpg");
+.par_text{
+    margin:5% 5% 5% 5%;
+}
+
+.logo_pic{
+    height: 50%;
+    width: 50%;
+}
+
+.mybio {
+    background-image:  linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.4) 100%),url("../img/forest.jpg");
     background-size: cover;
-    opacity: 0.8;
     background-repeat: no-repeat;
     background-position: center;
     align-items:center;
-    justify-content:center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
-#hobbys {
-    background-image: url("img/ocean.jpg");
+.hobbys {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.4) 100%), url("../img/ocean.jpg");
     background-size: cover;
-    opacity: 0.5;
-    
-}
-#skills {
-    background-image: url("img/mountains.jpg");
-    background-size: cover;
-    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
 }
 
-#hobbyspic {
-    height: 150px;
-    width: 150px;
+/*body::after {*/
+    /*background: url(yourfilename.jpg);*/
+    /*content: "";*/
+    /*opacity: 0.6;*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    /*z-index: -1;*/
+    /*width:auto;*/
+    /*height: 100%;*/
+/*}*/
+
+
+.skills {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.4) 100%),url("../img/mountains.jpg");
+    background-size: cover;
+    justify-content: baseline;
 }
+button {
+    margin:2% 2% 2% 2%;
+}
+.slider_pic {
+    height: 150px;
+    width: 30%;
+}
+
+.headermenu {
+    height: 50px;
+}
+
+footer{
+    background-color:var(--font-color);
+    display:grid;
+    grid-gap:2% 5%;
+    grid-template: 1fr/1fr 1fr 1fr;
+}
+
+footer > *{
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content:space-between;
+    justify-content:space-between;
+}
+
+.logo_list {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.foot_menu{
+    margin-bottom: 30%;
+    padding:0;
+}
+
+.links:first-child{
+    padding-left:10%;
+}
+
